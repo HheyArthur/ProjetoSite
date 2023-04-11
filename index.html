@@ -5,34 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Jogos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
 </head>
 
 <body>
-    <header>
+
+    <nav>
+        <div id="hamburguer">
+            <div class="linha" id="linha1"></div>
+            <div class="linha" id="linha2"></div>
+            <div class="linha" id="linha3"></div>
+
+        </div>
+        <ul>
+            <li><a href="#home">
+                <i class="fa-regular fa-snowflake fa-rotate-180"></i>
+                <!-- <i class="fa-solid fa-house"></i> -->
+                Home</a></li>
+            <li><a href="#secao-apresentacao">
+                <i class="fa-regular fa-user"></i>
+                Apresentação</a></li>
+            <li><a href="#secao-decards">
+                <i class="fa-solid fa-code-merge"></i>
+                Projetos</a></li>
+            <li><a href="#secao-orcamento">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                Orçamentos
+            </a></li>
+        </ul>
+    </nav>
+
+    <header id ="home">
 <h1> Biblioteca de Jogos</h1>
 <h2>Desenvolvido por Arthur Guimarães</h2>
-<a href="#" class="botao">Saiba Mais</a>       
+<a href="#secao-apresentacao" class="botao">Saiba Mais</a>       
         </header>
 
-        <!-- deixa aqui ou no meio/fim com alguma coisa que eu possa acrecentar -->
-<section> 
-    <img id = "avatar" src="./selec.jpg" alt="gameboy antigo">
-    <div>
-        <h2> Curiosidade</H2>
-        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum a inventore soluta, voluptatum maxime odit.</P>
-        <a href="#" class="botao">Veja mais aqui</a>
+        <section id= "secao-apresentacao">
 
-    </div>
-</section>
-
-
+            <!-- deixa aqui ou no meio/fim com alguma coisa que eu possa acrecentar -->
+            <section> 
+                <img id = "avatar" src="./assets/imagens/selec.jpg" alt="gameboy antigo">
+                <div>
+                    <h2> Curiosidade</H2>
+                        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum a inventore soluta, voluptatum maxime odit.</P>
+                        <a href="#secao-decards" class="botao">Veja mais aqui</a>
+                        
+                    </div>
+                </section>
+            </section>
+                
+                
 <section id= "secao-decards">
 <ul>
     <li>
         <div class = "card">
         <div class="card-fundoyugi">
-        <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+        <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
            </div>
 
         <div>
@@ -51,7 +81,7 @@
         <div class = "card">
             <div class ="imagemfront"> </div>
             <div class="card-fundoyugi">
-            <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+            <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
         </div>
             
         <div class="cardtexto">
@@ -67,7 +97,7 @@
     <li>
         <div class = "card">
         <div class="card-fundoyugi">
-            <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+            <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
         </div>
 
         <div class="cardtexto">
@@ -82,7 +112,7 @@
     <li>
         <div class = "card">
         <div class="card-fundoyugi">
-            <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+            <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
         </div>
 
         <div class="cardtexto">
@@ -97,7 +127,7 @@
       <li>
         <div class = "card">
         <div class="card-fundoyugi">
-            <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+            <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
         </div>
 
         <div class="cardtexto">
@@ -112,7 +142,7 @@
       <li>
         <div class = "card">
         <div class="card-fundoyugi">
-            <img src="./yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
+            <img src="./assets/imagens/yugioh fundo.png" alt="imagem do fundo da carta do yugioh " />
         </div>
 
         <div class="cardtexto">
@@ -125,8 +155,41 @@
       </li>
     </ul>
 
+    </section>
 
-</section>
+<!-- aula 3 -->
+    <section id = "secao-orcamento">
+        <form action = "#"> 
+             <!--para a resposta vai do form  -->
+          <h3>Orçamentos</h3>
+    
+          <label for="qtde">N. de Jogos</label>  
+          <!-- Rotulo -->
+          <input type="number" id = "qtde" min = '1 ' value = '1'>
+          <!-- Input serve para o tipo entrada de dados -->
+          <label for="JS">Precisa de Capa?</label>
+          <input type="checkbox" id ="js">
+          <label for="layout">Capa Dura?</label>
+    <div class="input-group">
+        <!-- a div aqui seria para agrupar os componetes de sim e não. -->
+        <input type="radio" id="layout_sim"name="layout">
+        <label for="layout_sim">Sim, preciso</label>
+        <input type="radio" id ="layout_nao"name="layout">
+        <label for="layout_nao">Não</label>
+    </div>
+    <label for="prazo">Prazo</label>
+    <input type="range" id = "prazo" min = '1' max = '10'>
+    <!-- input do botao de nivel -->
+    <output>R$ 0,00</output>
+    
+        </form>
+    
+    </section>
+    
+    
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    
 
 
 
