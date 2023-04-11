@@ -300,7 +300,11 @@ transition: all 0.3s;
 /* aula 3 */
 #secao-orcamento{
     height: 100vh;
+<<<<<<< HEAD:assets/css/style.css
     background: url(../imagens/fundo.jpg);
+=======
+    background: url(fundo.jpg);
+>>>>>>> 5dd5de3726fae78bfb05af5b0c9afddd59359796:style.css
     background-size: cover;
     display: flex;
     justify-content: center;
