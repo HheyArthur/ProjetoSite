@@ -210,7 +210,7 @@ div {
 }
 #secao-decards ul{
     display: flex;
-    gap: 15rem;
+    gap: 5rem;
     /* 2.rem fica tudo coladinho mudar o gap para definir os tamanhos */
     color: var(--text-primary);
 } 
@@ -359,6 +359,85 @@ input[type=number]
 
 #secao-orcamento form output {
     grid-column: 2;
+    }
 
+
+    /* Aula responsividade */
+/* media print para caso alguem queira imprimir */
+
+
+
+@media (max-width: 890px) {
+    #secao-decards ul {
+        flex-direction: column;
+    }
+
+    #secao-orcamento form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* (max <= 890px)
+ can i use site para consulta se o navegador da suporte para elementos da triade. */
+
+ /* @media (max-width: 768px) {
+     #avatar {
+        display: none;
+    } */
+    @media (max-width: 768px) {
+        .largo {
+            display: none;
+        }
+    }
+
+    .loader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .spin{
+        height: 85px;
+        width: 90px;
+        border-radius: 80%;
+        border: 10px solid #d0d0d0;
+        border-top: 10px solid #FF7B2C;
+        animation: spin 2s linear infinite;
+    }
+    
+    .hiden {
+        display: none;
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+
+
+
+
+/* .teste {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+
+/* .menuh {
+    background-color: #f611c4;
 }
 
+.teste,titulo{
+    justify-content: flex-start;
+} */
